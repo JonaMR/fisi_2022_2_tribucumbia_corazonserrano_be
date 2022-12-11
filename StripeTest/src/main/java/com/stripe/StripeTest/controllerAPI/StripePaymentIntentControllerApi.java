@@ -61,7 +61,7 @@ public class StripePaymentIntentControllerApi {
         PaymentIntent paymentIntent1 = PaymentIntent.retrieve(paymentIntent.getId());
         Map<String, Object> params2 = new HashMap<>();
         params.put("payment_method", "pm_card_visa");
-        String prueba = "hola";
+        String prueba = "hola_mundo";
         PaymentIntent updatedPaymentIntent = paymentIntent.confirm(params2);
         return new ResponseEntity<>(customerData, HttpStatus.ACCEPTED);
     }
