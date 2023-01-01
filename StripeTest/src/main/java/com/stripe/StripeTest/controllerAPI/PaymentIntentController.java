@@ -44,7 +44,7 @@ public class PaymentIntentController {
         Stripe.apiKey = apikey;
         //Agrega los datos de tarjeta
         Map<String, Object> card = new HashMap<>();
-        card.put("number", String.valueOf(cardUser.getNumber()));
+        card.put("number", String.valueOf(cardUser.getNumber()));//424242424242424
         card.put("cvc", String.valueOf(cardUser.getCvc()));
         card.put("exp_month", cardUser.getMes_expiracion());
         card.put("exp_year", cardUser.getAnio_expiracion());

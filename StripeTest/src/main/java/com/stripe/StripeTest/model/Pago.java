@@ -17,7 +17,10 @@ public class Pago {
     @Column(name = "monto", nullable = false)
     private Double monto;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @Column(name = "nombreArchivo", nullable = false)
+    private String archivo;
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "id_matricula", nullable = false)
     private Matricula idMatricula;
 
@@ -53,4 +56,11 @@ public class Pago {
         this.idMatricula = idMatricula;
     }
 
+    public String getArchivo() {
+        return archivo;
+    }
+
+    public void setArchivo(String archivo) {
+        this.archivo = archivo;
+    }
 }
